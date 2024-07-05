@@ -32,7 +32,7 @@ Bm25 version uses `tantivy` library for indexing and search.
 ```bash
 python index_bm25.py
 
-python ecaluate-bm25.py
+python evaluate-bm25.py
 ```
 
 Results we got:
@@ -56,7 +56,7 @@ docker run --rm -d --network=host qdrant/qdrant:v1.10.0
 
 python index_bm42.py
 
-python ecaluate-bm42.py
+python evaluate-bm42.py
 ```
 
 Results we got:
