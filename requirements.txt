@@ -2,3 +2,4 @@ tqdm
 qdrant-client>=1.10.0
 fastembed>=0.3.2
 tantivy
+ipdb
