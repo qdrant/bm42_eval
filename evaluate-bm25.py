@@ -31,7 +31,7 @@ def load_queries():
 
 def sanitize_query_for_tantivy(query):
     # escape special characters
-    query = re.sub(r'([+\-!(){}\[\]^"~*?:\\<])', r'\\1', query)
+    query = re.sub(r'([+\-!(){}\[\]^"~*?:\\<])', r'', query)
     return query
 
 

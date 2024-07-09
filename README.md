@@ -25,7 +25,7 @@ pip install -r requirements.txt
 (Note: for gpu inference see [fastembed](https://github.com/qdrant/fastembed?tab=readme-ov-file#%EF%B8%8F-fastembed-on-a-gpu))
 
 
-## BM25
+## BM25 (updated)
 
 Bm25 version uses `tantivy` library for indexing and search. 
 
@@ -38,10 +38,10 @@ python evaluate-bm25.py
 Results we got:
 
 ```
-Total hits: 9394 out of 15675, which is 0.5992982456140351
-Precision: 0.09394
-Average precision: 0.09394000000001176
-Average recall: 0.7131305557181846
+Total hits: 11978 out of 15675, which is 0.7641467304625199
+Precision: 0.11978
+Average precision: 0.11977999999999858
+Average recall: 0.8901691968391522
 ```
 
 ## BM25 with sparse vectors
