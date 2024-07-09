@@ -13,14 +13,14 @@ def load_queries():
         for line in file:
             row = json.loads(line)
             queries[row["_id"]] = { **row, "doc_ids": [] }
-    
+
     with open(f"data/{DATASET}/qrels/test.tsv", "r") as file:
         next(file)
         for line in file:
             query_id, doc_id, score = line.strip().split("\t")
             if int(score) > 0:
                 queries[query_id]["doc_ids"].append(doc_id)
-    
+
     queries_filtered = {}
     for query_id, query in queries.items():
         if len(query["doc_ids"]) > 0:
@@ -31,7 +31,7 @@ def load_queries():
 
 def sanitize_query_for_tantivy(query):
     # escape special characters
-    query = re.sub(r'([+\-!(){}\[\]^"~*?:\\<])', r'', query)
+    query = re.sub(r'([+\-!(){}\[\]^"~*?:\\<])', r' ', query)
     return query
 
 
@@ -52,7 +52,7 @@ def main():
             for (score, doc_address) in hits
         ]
         return docs
-    
+
     n = 0
     hits = 0
     limit = 10
