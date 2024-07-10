@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ## BM25 (updated)
 
-Bm25 version uses `tantivy` library for indexing and search. 
+Bm25 version uses `tantivy` library for indexing and search.
 
 ```bash
 python index_bm25.py
@@ -38,15 +38,15 @@ python evaluate-bm25.py
 Results we got:
 
 ```
-Total hits: 11978 out of 15675, which is 0.7641467304625199
-Precision: 0.11978
-Average precision: 0.11977999999999858
-Average recall: 0.8901691968391522
+Total hits: 12065 out of 15675, which is 0.7696969696969697
+Precision: 0.12065
+Average precision: 0.12065
+Average recall: 0.8952571817831299
 ```
 
 ## BM25 with sparse vectors
 
-Additionally, we compare pure sparse vectors implementation with BM25. 
+Additionally, we compare pure sparse vectors implementation with BM25.
 It uses exactly the same tokenizer and stemmer as BM42, which provides a more fair comparison.
 
 

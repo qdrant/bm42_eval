@@ -38,16 +38,15 @@ def main():
 
     writer = index.writer()
 
-    for idx, (doc_id, doc_text) in tqdm(enumerate(read_file(file_name))):
+    for idx, (doc_id, doc_text) in enumerate(read_file(file_name)):
         doc = tantivy.Document(
             doc_id=doc_id,
             body=doc_text
         )
         writer.add_document(doc)
-        if idx % 1000 == 0:
-            writer.commit()
 
     writer.commit()
+    print("indexed")
 
 if __name__ == '__main__':
     main()
